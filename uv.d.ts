@@ -101,4 +101,8 @@ export interface UVConfig {
      * @defaultValue `Ultraviolet.codec.xor.decode`
      */
     decodeUrl?: UVDecode;
+    /**
+     * Enable if you ONLY want to use the bare-client-custom functionality and not bare server.
+     */
+    nobare: boolean;
 }

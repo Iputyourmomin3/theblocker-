@@ -34,7 +34,8 @@ import {
     wrapEval,
 } from './rewrite.script.js';
 import { openDB } from 'idb';
-import BareClient from '@tomphttp/bare-client';
+import { BareClient as BareClientPure } from '@tomphttp/bare-client';
+import { BareClient as BareClientCustom } from '@mercuryworkshop/bare-client-custom';
 import EventEmitter from 'events';
 
 /**
@@ -190,7 +191,8 @@ class Ultraviolet {
     static mime = mimeTypes;
     static setCookie = setCookie;
     static openDB = openDB;
-    static BareClient = BareClient;
+    static BareClientPure = BareClientPure;
+    static BareClientCustom = BareClientCustom;
     static EventEmitter = EventEmitter;
 }
 
