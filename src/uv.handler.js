@@ -1078,6 +1078,8 @@ function __uvHook(window) {
             if (cookieStr !== '')
                 requestHeaders['Cookie'] = cookieStr.toString();
 
+            if ("then" in self.gBareClientImplementation)
+                self.gBareClientImplementation = await self.gBareClientImplementation;
             this.#socket = await bareClient.createWebSocket(
                 url,
                 protocol,
